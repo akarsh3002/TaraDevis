@@ -78,7 +78,6 @@ ul.iti__country-list {
 
 .gallery-cell {
   height: 340px;
-  margin-left: 14px;
   width: calc(100% / 3);
   background: rgb(63, 63, 63);
   counter-increment: gallery-cell;
