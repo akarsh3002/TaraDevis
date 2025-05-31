@@ -157,11 +157,11 @@
           class="hidden lg:flex space-x-8 text-gray-400 font-normal text-base"
         >
           <a href="/" class="nav-link">Home</a>
-          <a href="#aboutus" class="nav-link">About Us</a>
+          <a href="/#aboutus" class="nav-link">About Us</a>
           <a href="./residential.html" class="nav-link">Residential</a>
           <a href="./commercial.html" class="nav-link">Commercial</a>
           <a href="./amenities.html" class="nav-link">Amenities</a>
-          <a href="#contactus" class="nav-link">Contact Us</a>
+          <a href="/#contactus" class="nav-link">Contact Us</a>
         </div>
 
         <!-- Mobile Toggle -->
@@ -490,37 +490,37 @@
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/aerial front day (1).jpg"
+                src="./Assets/aerial front day (1).png"
                 loading="lazy"
                 alt="img"
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/aerial side day.jpg"
+                src="./Assets/aerial side day.jpg.png"
                 loading="lazy"
                 alt="img"
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/aerial valley view day (4).jpg"
+                src="./Assets/aerial valley view day (4).jpg.png"
                 loading="lazy"
                 alt="img"
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/AERIAL DUSK FRONT.jpg"
+                src="./Assets/AERIAL DUSK FRONT.png"
                 loading="lazy"
                 alt="img"
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/AERIAL REAR DAY.jpg"
+                src="./Assets/AERIAL REAR DAY.png"
                 loading="lazy"
                 alt="img"
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/AERIAL REAR DUSK.jpg"
+                src="./Assets/AERIAL REAR DUSK.png"
                 loading="lazy"
                 alt="img"
                 class="w-full md:w-[30rem] h-80 object-cover rounded-lg gallery-cell"
@@ -614,7 +614,7 @@
                 class="w-[30rem] h-[20rem] object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/Restaurant & Bar .jpg"
+                src="./Assets/7.png"
                 loading="lazy"
                 alt="img"
                 class="w-[30rem] h-[20rem] object-cover rounded-lg gallery-cell"
@@ -626,7 +626,7 @@
                 class="w-[30rem] h-[20rem] object-cover rounded-lg gallery-cell"
               />
               <img
-                src="./Assets/Hotel Room.jpg"
+                src="./Assets/10.png"
                 loading="lazy"
                 alt="img"
                 class="w-[30rem] h-[20rem] object-cover rounded-lg gallery-cell"
@@ -883,7 +883,7 @@
                 </div>
                 <div class="shadow-lg rounded-lg">
                   <img
-                    src="./Assets/aerial front day (1).jpg"
+                    src="./Assets/aerial front day.jpg"
                     loading="lazy"
                     alt="Gallery Image"
                     class="w-full aspect-square object-cover rounded cursor-pointer gallery-image"
@@ -1125,6 +1125,7 @@
                   type="text"
                   id="firstName"
                   placeholder="First Name*"
+                  pattern="[A-Za-z]+(?: [A-Za-z]+)*"
                   required
                   class="w-full sm:w-1/2 px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
@@ -1132,6 +1133,7 @@
                   type="text"
                   id="lastName"
                   placeholder="Last Name"
+                  pattern="[A-Za-z]+(?: [A-Za-z]+)*"
                   class="w-full sm:w-1/2 px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -1175,26 +1177,27 @@
           </div>
         </div>
       </section>
-
-      <!--Footer-->
-      <footer class="bg-[#001901] text-white text-center py-4 -mt-24 w-full">
-        <div
-          class="container bg-[#001901] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm"
-        >
-          <a href="#" class="hover:underline">Terms & Conditions</a>
-          <p class="text-xs md:text-sm">
-            Copyright © 2024 Tara Devi's Enclave - All Rights Reserved.
-          </p>
-          <a href="./privacypolicy.html" class="hover:underline"
-            >Privacy Policy</a
-          >
-        </div>
-        <a href="https://www.apexbyteinnovations.in/" class="text-xs mt-2">
-          Developed by
-          <span class="font-semibold underline">Apex Byte Innovations</span>
-        </a>
-      </footer>
     </div>
+
+    <!--Footer-->
+    <footer
+      class="bg-[#001901] text-white text-center py-4 md:mb-0 mb-14 w-full"
+    >
+      <div
+        class="container bg-[#001901] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm"
+      >
+        <p class="text-xs md:text-sm">
+          Copyright © 2024 Tara Devi's Enclave - All Rights Reserved.
+        </p>
+        <a href="./privacypolicy.html" class="hover:underline"
+          >Privacy Policy</a
+        >
+      </div>
+      <a href="https://www.apexbyteinnovations.in/" class="text-xs mt-2">
+        Developed by
+        <span class="font-semibold underline">Apex Byte Innovations</span>
+      </a>
+    </footer>
 
     <!-- Floating Sidebar (Always on Top) -->
     <div
@@ -1245,6 +1248,7 @@
             id="name"
             name="name"
             placeholder="Name"
+            pattern="[A-Za-z]+(?: [A-Za-z]+)*"
             required
             class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-900"
           />
@@ -1601,7 +1605,7 @@
         window.location.href = "amenities.html";
       }
       function redirectToHome() {
-        window.location.href = "index.html";
+        window.location.href = "/";
       }
 
       const contactForm = document.getElementById("contactForm");
@@ -1613,12 +1617,10 @@
         const lastName = document.getElementById("lastName").value.trim();
         const email = document.getElementById("email").value.trim();
         const phone = document.getElementById("phone").value.trim();
-        console.log(" contact form ", phone);
         const message = document.getElementById("message").value.trim();
         const countryCode = contactForm
           .querySelector(".iti__selected-flag")
           .getAttribute("title");
-        console.log(countryCode);
 
         const data = {
           firstName,
@@ -1644,7 +1646,7 @@
           );
 
           if (response.ok) {
-            alert("Your message has been sent successfully!");
+            window.location.href = "thankyou.html";
             contactForm.reset();
           } else {
             alert("There was an error sending your message.");
@@ -1663,7 +1665,6 @@
         const countryCode = downloadForm
           .querySelector(".iti__selected-flag")
           .getAttribute("title");
-        console.log(countryCode);
 
         const name = downloadForm.querySelector("#name").value.split(" ");
 
@@ -1672,11 +1673,8 @@
         if (name.length > 1) {
           lastName = name.slice(1).join(" ");
         }
-        console.log(lastName);
         const email = document.getElementById("emailId").value.trim();
-        console.log(email);
         const phone = document.getElementById("phoneNumber").value.trim();
-        console.log("download form ", phone);
         const inquiry = "Brochure Downloaded!";
 
         const data = {
@@ -1703,7 +1701,7 @@
           );
 
           if (response.ok) {
-            alert("Brochure Downloaded!");
+            window.location.href = "thankyou.html";
             downloadForm.reset();
           } else {
             alert("Error while downloading the brochure");
@@ -1804,8 +1802,6 @@
         const phone = form.phoneNumber.value.trim();
 
         if (name && email && phone) {
-          // Example: console.log({ name, email, phone });
-
           // Close modal
           modalB.classList.add("hidden");
 

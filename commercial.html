@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tara Devi's Enclave - Amenities</title>
+    <title>Tara Devi's Enclave</title>
     <link rel="icon" href="./Assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
     <!-- Google Fonts -->
@@ -137,11 +137,11 @@
       <!-- Desktop Nav Links -->
       <div class="hidden lg:flex space-x-8 text-gray-400 font-normal text-base">
         <a href="/" class="nav-link">Home</a>
-        <a href="index.html#aboutus" class="nav-link">About Us</a>
+        <a href="/#aboutus" class="nav-link">About Us</a>
         <a href="./residential.html" class="nav-link">Residential</a>
         <a href="./commercial.html" class="nav-link">Commercial</a>
         <a href="./amenities.html" class="nav-link">Amenities</a>
-        <a href="#contactus" class="nav-link">Contact Us</a>
+        <a href="/#contactus" class="nav-link">Contact Us</a>
       </div>
 
       <!-- Mobile Toggle -->
@@ -162,11 +162,11 @@
         <button id="menu-close" class="text-white text-3xl">✕</button>
       </div>
       <a href="/" class="mobile-link">Home</a>
-      <a href="index.html#aboutus" class="mobile-link">About Us</a>
+      <a href="/#aboutus" class="mobile-link">About Us</a>
       <a href="./residential.html" class="mobile-link">Residential</a>
       <a href="./commercial.html" class="mobile-link">Commercial</a>
       <a href="./amenities.html" class="mobile-link">Amenities</a>
-      <a href="./index.html#contactus" class="mobile-link">Contact Us</a>
+      <a href="/#contactus" class="mobile-link">Contact Us</a>
     </div>
 
     <main>
@@ -214,7 +214,7 @@
             class="w-full md:w-1/2 overflow-hidden rounded-lg opacity-0 translate-y-6 transition-all duration-1000 ease-out animate-on-scroll"
           >
             <img
-              src="./Assets/12.png"
+              src="./Assets/12wl.png"
               alt="Event Setup at Banquet Hall"
               class="w-full max-w-md mx-auto md:max-w-full rounded-lg object-cover transform hover:scale-105 transition-transform duration-500 ease-in-out"
             />
@@ -278,7 +278,7 @@
             class="w-full md:w-1/2 overflow-hidden rounded-lg opacity-0 translate-y-6 transition-all duration-1000 ease-out animate-on-scroll"
           >
             <img
-              src="./Assets/8.png"
+              src="./Assets/8wl.png"
               alt="Event Setup at Banquet Hall"
               class="w-full max-w-md mx-auto md:max-w-full rounded-lg object-cover transform hover:scale-105 transition-transform duration-500 ease-in-out"
             />
@@ -296,7 +296,7 @@
             class="w-full md:w-1/2 overflow-hidden rounded-lg opacity-0 translate-y-6 transition-all duration-1000 ease-out animate-on-scroll"
           >
             <img
-              src="./Assets/Hotel Room.jpg"
+              src="./Assets/Hotel Room .jpg"
               alt="Event Setup at Banquet Hall"
               class="w-full max-w-md mx-auto md:max-w-full rounded-lg object-cover transform hover:scale-105 transition-transform duration-500 ease-in-out"
             />
@@ -341,7 +341,7 @@
             class="w-full md:w-1/2 overflow-hidden rounded-lg opacity-0 translate-y-6 transition-all duration-1000 ease-out animate-on-scroll"
           >
             <img
-              src="./Assets/11.png"
+              src="./Assets/11wl.png"
               alt="Event Setup at Banquet Hall"
               class="w-full max-w-md mx-auto md:max-w-full rounded-lg object-cover transform hover:scale-105 transition-transform duration-500 ease-in-out"
             />
@@ -403,6 +403,7 @@
                   type="text"
                   id="firstName"
                   placeholder="First Name*"
+                  pattern="[A-Za-z]+(?: [A-Za-z]+)*"
                   required
                   class="w-full sm:w-1/2 px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
@@ -410,6 +411,7 @@
                   type="text"
                   id="lastName"
                   placeholder="Last Name"
+                  pattern="[A-Za-z]+(?: [A-Za-z]+)*"
                   class="w-full sm:w-1/2 px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -456,11 +458,12 @@
     </main>
 
     <!--Footer-->
-    <footer class="bg-[#001901] text-white text-center py-4 w-full">
+    <footer
+      class="bg-[#001901] text-white text-center py-4 md:mb-0 mb-14 w-full"
+    >
       <div
         class="container bg-[#001901] mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm"
       >
-        <a href="#" class="hover:underline">Terms & Conditions</a>
         <p class="text-xs md:text-sm">
           Copyright © 2024 Tara Devi's Enclave - All Rights Reserved.
         </p>
@@ -523,6 +526,7 @@
             id="name"
             name="name"
             placeholder="Name"
+            pattern="[A-Za-z]+(?: [A-Za-z]+)*"
             required
             class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-900"
           />
@@ -684,7 +688,7 @@
           .classList.add("translate-x-full");
       });
       function redirectToHome() {
-        window.location.href = "index.html";
+        window.location.href = "/";
       }
 
       const observer = new IntersectionObserver(
@@ -717,7 +721,6 @@
         const countryCode = contactForm
           .querySelector(".iti__selected-flag")
           .getAttribute("title");
-        console.log(countryCode);
 
         const data = {
           firstName,
@@ -743,7 +746,7 @@
           );
 
           if (response.ok) {
-            alert("Your message has been sent successfully!");
+            window.location.href = "thankyou.html";
             contactForm.reset();
           } else {
             alert("There was an error sending your message.");
@@ -762,7 +765,6 @@
         const countryCode = downloadForm
           .querySelector(".iti__selected-flag")
           .getAttribute("title");
-        console.log(countryCode);
 
         const name = downloadForm.querySelector("#name").value.split(" ");
 
@@ -772,11 +774,8 @@
           lastName = name.slice(1).join(" ");
         }
 
-        console.log(lastName);
         const email = document.getElementById("emailId").value.trim();
-        console.log(email);
         const phone = document.getElementById("phoneNumber").value.trim();
-        console.log("download form ", phone);
         const inquiry = "Brochure Downloaded!";
 
         const data = {
@@ -803,7 +802,7 @@
           );
 
           if (response.ok) {
-            alert("Brochure Downloaded!");
+            window.location.href = "thankyou.html";
             downloadForm.reset();
           } else {
             alert("Error while downloading the brochure");
@@ -840,8 +839,6 @@
         const phone = form.phoneNumber.value.trim();
 
         if (name && email && phone) {
-          // Example: console.log({ name, email, phone });
-
           // Close modal
           modalB.classList.add("hidden");
 
